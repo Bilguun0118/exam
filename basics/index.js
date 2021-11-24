@@ -1,14 +1,15 @@
 // 1. 0 - ээс 100 хүртэлх тоог хэвлэ.
 // -- Энд кодоо бичнэ үү!!
-//for (let i = 1; i < 101; i ++){
-//    console.log(i);
-//}
+for (let i = 1; i < 101; i ++){
+    console.log(i);
+}
 
 // 2. 60 - с 30 хүртэлх бүх СОНДГОЙ тоог хэвлэ.
 // -- Энд кодоо бичнэ үү!!
-for (let i = 60; i < 30; i = i-2) {
-
-    console.log(i);
+for (let i = 60; i >=30; i --) {
+    if (i % 2 === 1){
+        console.log(i);
+    }
 }
 // 3. Чагтаас бүрдсэн квадрат зурах ба баруун тийшээ налсан диагональ нь нэмэх тэмдэг байна:
 // ######+
@@ -36,10 +37,9 @@ for (let i= 0; i < 7; i ++) {
 
 // 5. Бүх .red-boxes гэсэн класстай элемэнтийг улаан болго;
 // -- Энд кодоо бичнэ үү!!
-function myFunction(){ 
-
-    document.querySelectorAll(".red-boxes").style.color = "red";
-
+const $red = document.querySelectorAll('.red-boxes');
+for (let i = 0; i < $red.length; i ++){
+    $red[i].style.color = "red";
 }
 //document.getElementById("red-boxes").style.color = "red";
     
@@ -52,8 +52,10 @@ function myFunction(){
 
 // 7. Бүх div - ийг бор болго;
 // -- Энд кодоо бичнэ үү!!
-    document.getElementsByTagName("div").style.color = "brown";
-
+const $brown = document.querySelectorAll('div');
+for (let i = 0; i < $brown.length; i ++){
+    $brown[i].style.color = "brown";
+}
 // 8. Шинээр box гэсэн класстай section tag үүсгээд, хар өнгөтэй болгоно.
 //    Дотор нь box гэсэн класстай article tag үүсгэнэ.
 //    article tag - ыг улаан өнгөтэй бөөрөнхий болгоно (JS - ээр)
